@@ -1,0 +1,8 @@
+{
+  "description": "Random seeds used in RP-SBe experiments for reproducibility",
+  "numpy_seed": 42,
+  "python_random_seed": 42,
+  "torch_seed": 42,
+  "opencv_seed": 42,
+  "notes": "All experiments used these fixed seeds for reproducibility of detection, encryption, and evaluation results."
+}

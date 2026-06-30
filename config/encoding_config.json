@@ -1,0 +1,11 @@
+{
+  "encoding_method": "Python (OpenCV)",
+  "library": "opencv-python",
+  "codec_fourcc": "mp4v",
+  "container": "MP4",
+  "quality_control": "Default encoder quality (no explicit CRF)",
+  "gop_size": 30,
+  "frame_rate": 30,
+  "resolution": "1920x1080",
+  "notes": "Videos were encoded using cv2.VideoWriter with H.264 codec via OpenCV. No standalone x264 command-line tool was used. CRF-equivalent quality was controlled through encoder defaults."
+}

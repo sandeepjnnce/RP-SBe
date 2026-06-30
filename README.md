@@ -1,56 +1,22 @@
-\# RP-SBe: Risk-Proportional Sign-Bit Encryption for Privacy-Preserving H.264 Surveillance Video
+# RP-SBe: Risk-Proportional Sign-Bit Encryption for Privacy Protection in H.264 Surveillance Video
 
+This repository contains the implementation of RP-SBe, a risk-proportional sign-bit encryption framework for privacy-preserving H.264 surveillance video.
 
+## Important Notes
 
-This repository contains the implementation and experimental code for the paper:
+- All videos were encoded using Python (OpenCV) with H.264 codec. We did not use the standalone `x264` command-line tool.
+- Encoding configuration is available in `config/encoding_config.json`.
+- AHP weights and tier thresholds are available in `config/ahp_config.json`.
+- Random seeds used in all experiments are available in `config/random_seeds.json`.
 
-
-
-\*\*RP-SBe: A Risk-Proportional Sign-Bit Encryption Scheme for Privacy Protection in H.264/AVC Surveillance Video Streams\*\*
-
-
-
-\## Abstract
-
-RP-SBe is a selective encryption framework that applies encryption intensity proportionally to the privacy risk of each detected region (faces and license plates) using AHP-based risk scoring. It achieves strong privacy protection with minimal bitrate overhead while maintaining full H.264/AVC format compliance.
-
-
-
-\## Key Features
-
-\- Risk-proportional encryption using AHP-derived privacy scores
-
-\- Format-compliant sign-bit encryption using ChaCha20-CTR
-
-\- Real-time performance (81.3 FPS core pipeline)
-
-\- New Risk-Weighted Visual Distortion (RWVD) metric
-
-\- Comprehensive evaluation against ArcFace, Re-ID, and LPR
-
-
-
-\## Directory Structure
-
-\- `code/`: Core implementation (key management, encryption, evaluation)
-
-\- `scripts/`: Scripts to run experiments and generate results
-
-\- `paper/`: Preprint of the paper
-
-\- `results/`: Tables and figures
-
-\- `data/`: Instructions to obtain datasets
-
-
-
-\## Installation
-
-```bash
-
-git clone https://github.com/sandeepjnnce/RP-SBe.git
-
-cd RP-SBe
-
-pip install -r requirements.txt
-
+## Repository Structure
+RP-SBe/
+├── code/
+│   ├── key_management/       # AHP, ECDH, HKDF
+│   ├── sign_bit_encryption/  # Core RP-SBe encryption
+│   ├── evaluation/           # ArcFace, LPR, Re-ID evaluation
+│   └── utils/
+├── scripts/                  # Experiment and result generation scripts
+├── config/                   # Configuration files (AHP, encoding, seeds)
+├── results/                  # Generated tables and figures
+└── README.md
